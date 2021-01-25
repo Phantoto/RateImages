@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#e6e6e6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="355dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/dog" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/edit_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/edit_message"
+            android:textColor="#ffffff"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_send" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="136dp"
+            android:layout_height="130dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/dislike"
+            tools:layout_editor_absoluteY="-2dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="131dp"
+            android:layout_height="121dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/like"
+            tools:layout_editor_absoluteY="3dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
